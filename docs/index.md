@@ -20,12 +20,12 @@ Ce site regroupe l'ensemble des supports de révision pour les examens du semest
 - Opérateurs différentiels
 - Applications physiques
 
-## 🗺️ Navigation
+<!-- ## 🗺️ Navigation
 
 ### Guide de Révision
 - [Planning détaillé](guide/planning.md)
-- [Guide Calculatrices](guide/calculatrices.md)
-- [Synthèse Finale](guide/synthese.md)
+- [Guide Calculatrices](guide/Guide_Calculatrices.md)
+- [Synthèse Finale](guide/Synthese_Final.md)
 
 ### Par Module
 - [ETS15 - Théorie](ets15/theorie/fonctions.md)
@@ -34,7 +34,7 @@ Ce site regroupe l'ensemble des supports de révision pour les examens du semest
 
 ### Exercices et Tests
 - [Test Blanc](tests/test1.md)
-- [Exercices Types](ets15/exercices/types.md)
+- [Exercices Types](ets15/exercices/types.md) -->
 
 ## 📅 Planning de Révision
 
