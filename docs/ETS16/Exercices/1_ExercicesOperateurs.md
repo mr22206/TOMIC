@@ -1,111 +1,92 @@
-# Exercices - Opérateurs Vectoriels
+# Exercices sur les Opérateurs Vectoriels
 
-## 1. Calculs de Base
+## 1. Gradient
 
-### Exercice 1.1 : Gradient
-Soit f(x,y,z) = x²y + yz² + xz
-1. Calculer grad f
-2. Évaluer grad f au point (1,1,1)
-3. Déterminer la direction de plus forte variation en ce point
+### Exercice 1.1 : Calcul Direct
+Calculer le gradient des fonctions suivantes :
 
-**Solution** :
-1. grad f = (2xy + z)i + (x² + z²)j + (2yz + x)k
-2. En (1,1,1) : grad f = 3i + 2j + 3k
-3. Direction : vecteur unitaire = (3,2,3)/√22
+1. \\(f(x,y,z) = x^{2} + y^{2} + z^{2}\\)
+   \\[ \\vec{\\nabla}f = 2x\\vec{i} + 2y\\vec{j} + 2z\\vec{k} \\]
 
-**Programme calculatrice** :
-```python
-def gradient(x, y, z):
-    return [2*x*y + z, x**2 + z**2, 2*y*z + x]
-```
+2. \\(g(x,y,z) = \\ln(x^2 + y^2 + z^2)\\)
+   \\[ \\vec{\\nabla}g = \\frac{2x}{x^2 + y^2 + z^2}\\vec{i} + \\frac{2y}{x^2 + y^2 + z^2}\\vec{j} + \\frac{2z}{x^2 + y^2 + z^2}\\vec{k} \\]
 
-## 2. Divergence et Rotationnel
+### Exercice 1.2 : Coordonnées Cylindriques
+Calculer le gradient en coordonnées cylindriques :
+\\[ \\vec{\\nabla}f = \\frac{\\partial f}{\\partial r}\\vec{e_r} + \\frac{1}{r}\\frac{\\partial f}{\\partial \\theta}\\vec{e_{\\theta}} + \\frac{\\partial f}{\\partial z}\\vec{k} \\]
 
-### Exercice 2.1 : Champ de vitesse
-Soit v = (xy²)i + (x²y)j + (z²)k
-1. Calculer div v
-2. Calculer rot v
-3. Interpréter les résultats
+## 2. Divergence
 
-**Solution** :
-1. div v = y² + x² + 2z
-2. rot v = (-z²)i + 0j + (x²-y²)k
-3. Non conservatif car rot v ≠ 0
+### Exercice 2.1 : Champs Vectoriels
+Calculer la divergence :
+1. \\(\\vec{F} = x\\vec{i} + y\\vec{j} + z\\vec{k}\\)
+   \\[ \\vec{\\nabla} \\cdot \\vec{F} = \\frac{\\partial F_x}{\\partial x} + \\frac{\\partial F_y}{\\partial y} + \\frac{\\partial F_z}{\\partial z} = 3 \\]
 
-**Programme TI-83** :
-```basic
-:Input "X=",X
-:Input "Y=",Y
-:Input "Z=",Z
-:Y²+X²+2Z→D
-:Disp "DIV=",D
-```
+2. \\(\\vec{G} = \\frac{\\vec{r}}{r^3}\\)
+   \\[ \\vec{\\nabla} \\cdot \\vec{G} = 4\\pi\\delta(\\vec{r}) \\]
 
-## 3. Applications Physiques
+### Exercice 2.2 : Applications
+1. Équation de continuité : 
+   \\[ \\frac{\\partial \\rho}{\\partial t} + \\vec{\\nabla} \\cdot (\\rho\\vec{v}) = 0 \\]
+2. Théorème de Gauss : 
+   \\[ \\iiint_V \\vec{\\nabla} \\cdot \\vec{F}\\,dV = \\iint_S \\vec{F} \\cdot \\vec{n}\\,dS \\]
 
-### Exercice 3.1 : Électrostatique
-Un champ électrique E = (x/r³)i + (y/r³)j + (z/r³)k avec r = √(x²+y²+z²)
-1. Vérifier que div E = 0 pour r ≠ 0
-2. Calculer le flux à travers une sphère
-3. Interpréter physiquement
+## 3. Rotationnel
 
-**Solution** :
-1. div E = (1/r³)(3 - 3) = 0
-2. Flux = 4πq/ε₀ (loi de Gauss)
-3. Présence d'une charge ponctuelle
+### Exercice 3.1 : Calcul Direct
+Calculer le rotationnel :
+\\[ \\vec{\\nabla} \\times \\vec{F} = \\begin{vmatrix} 
+\\vec{i} & \\vec{j} & \\vec{k} \\\\
+\\frac{\\partial}{\\partial x} & \\frac{\\partial}{\\partial y} & \\frac{\\partial}{\\partial z} \\\\
+F_x & F_y & F_z
+\\end{vmatrix} \\]
 
-## 4. Théorèmes Intégraux
+### Exercice 3.2 : Champs Irrotationnels
+Vérifier si le champ est irrotationnel :
 
-### Exercice 4.1 : Circulation
-Calculer ∮C F·dr pour F = (-y)i + (x)j sur le cercle x² + y² = 1
-1. Paramétrer la courbe
-2. Calculer directement
-3. Utiliser le théorème de Green
+1. \\(\\vec{F} = -y\\vec{i} + x\\vec{j}\\)
+2. \\(\\vec{G} = \\frac{-y}{x^2 + y^2}\\vec{i} + \\frac{x}{x^2 + y^2}\\vec{j}\\)
 
-**Solution** :
-1. x = cos(t), y = sin(t), t ∈ [0,2π]
-2. ∮C F·dr = ∫0^2π 2 dt = 4π
-3. ∫∫D rot F·k dxdy = ∫∫D 2 dxdy = 4π
+## 4. Laplacien
 
-## 5. Coordonnées Curvilignes
+### Exercice 4.1 : Scalaire
+Calculer le laplacien :
+\\[ \\nabla^2 f = \\frac{\\partial^2 f}{\\partial x^2} + \\frac{\\partial^2 f}{\\partial y^2} + \\frac{\\partial^2 f}{\\partial z^2} \\]
 
-### Exercice 5.1 : Coordonnées Cylindriques
-Soit f(r,θ,z) = r²cos(θ) + z²
-1. Calculer grad f
-2. Exprimer en coordonnées cartésiennes
-3. Vérifier la cohérence
+### Exercice 4.2 : Vectoriel
+Calculer le laplacien vectoriel :
+\\[ \\nabla^2 \\vec{F} = \\vec{\\nabla}(\\vec{\\nabla} \\cdot \\vec{F}) - \\vec{\\nabla} \\times (\\vec{\\nabla} \\times \\vec{F}) \\]
 
-**Solution** :
-1. grad f = (2r cos(θ))er + (-r²sin(θ))eθ + (2z)ez
-2. grad f = (2x)i + (2y)j + (2z)k
-3. Cohérent car f(x,y,z) = x² - y² + z²
+## 5. Applications Physiques
 
-**Programme Numworks** :
-```python
-from math import cos, sin
+### Exercice 5.1 : Électromagnétisme
+1. Équations de Maxwell :
+   \\[ \\vec{\\nabla} \\cdot \\vec{E} = \\frac{\\rho}{\\epsilon_0} \\]
+   \\[ \\vec{\\nabla} \\cdot \\vec{B} = 0 \\]
+   \\[ \\vec{\\nabla} \\times \\vec{E} = -\\frac{\\partial \\vec{B}}{\\partial t} \\]
+   \\[ \\vec{\\nabla} \\times \\vec{B} = \\mu_0\\vec{j} + \\mu_0\\epsilon_0\\frac{\\partial \\vec{E}}{\\partial t} \\]
 
-def grad_cylindrique(r, theta, z):
-    er = 2*r*cos(theta)
-    etheta = -r**2*sin(theta)
-    ez = 2*z
-    return [er, etheta, ez]
-```
+2. Potentiels :
+   \\[ \\vec{E} = -\\vec{\\nabla}V - \\frac{\\partial \\vec{A}}{\\partial t} \\]
+   \\[ \\vec{B} = \\vec{\\nabla} \\times \\vec{A} \\]
 
-## 6. Exercices de Synthèse
+### Exercice 5.2 : Mécanique des Fluides
+1. Équation de continuité :
+   \\[ \\frac{\\partial \\rho}{\\partial t} + \\vec{\\nabla} \\cdot (\\rho\\vec{v}) = 0 \\]
 
-### Exercice 6.1
-Pour F = (x²-y²)i + (2xy)j + (yz)k
-1. Est-il conservatif ?
-2. Si oui, trouver le potentiel
-3. Calculer la circulation sur un contour fermé
+2. Équation de Navier-Stokes :
+   \\[ \\rho\\frac{D\\vec{v}}{Dt} = -\\vec{\\nabla}p + \\mu\\nabla^2 \\vec{v} + \\rho\\vec{g} \\]
 
-**Méthode** :
-1. Calculer rot F
-2. Vérifier si rot F = 0
-3. Si oui, intégrer pour trouver f tel que F = grad f
+## Méthodes de Résolution
 
-## Conseils pour l'Examen
-1. Vérifier la cohérence dimensionnelle
-2. Utiliser les symétries du problème
-3. Choisir le système de coordonnées adapté
-4. Penser aux théorèmes pour simplifier les calculs 
+### 1. Étapes Générales
+1. Identifier l'opérateur
+2. Choisir le système de coordonnées
+3. Appliquer les formules
+4. Vérifier les unités
+
+### 2. Points Clés
+1. Propriétés des opérateurs
+2. Changements de coordonnées
+3. Théorèmes intégraux
+4. Applications physiques 

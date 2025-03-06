@@ -3,43 +3,55 @@
 ## 1. Intégrales Doubles
 
 ### 1.1 Définition
-- Notation : ∫∫D f(x,y) dxdy
-- Domaine D ⊂ ℝ²
-- Interprétation : volume sous la surface z = f(x,y)
+- Notation : 
+  \\[\\iint_{D} f(x,y) \\,dx\\,dy\\]
+- Domaine \\(D \\subset \\mathbb{R}^{2}\\)
+- Interprétation : volume sous la surface \\(z = f(x,y)\\)
 
-### 1.2 Calcul sur un rectangle [a,b]×[c,d]
-- ∫∫[a,b]×[c,d] f(x,y) dxdy = ∫a^b (∫c^d f(x,y) dy) dx
-- Ordre possible : dx dy ou dy dx
+### 1.2 Calcul sur un rectangle \\([a,b]\\times[c,d]\\)
+
+\\[\\iint_{[a,b]\\times[c,d]} f(x,y) \\,dx\\,dy = \\int_{a}^{b} \\left(\\int_{c}^{d} f(x,y) \\,dy\\right) \\,dx\\]
+
+- Ordre possible : \\(dx\\,dy\\) ou \\(dy\\,dx\\)
 - Choisir l'ordre le plus simple
 
 ## 2. Changement de Variables
 
 ### 2.1 Formule générale
-- u = u(x,y) et v = v(x,y)
-- |J| = |∂(u,v)/∂(x,y)| = |∂u/∂x ∂u/∂y; ∂v/∂x ∂v/∂y|
-- ∫∫D f(x,y) dxdy = ∫∫D' f(u,v) |J| dudv
+- \\(u = u(x,y)\\) et \\(v = v(x,y)\\)
+
+- Jacobien : 
+  \\[|J| = \\left|\\frac{\\partial(u,v)}{\\partial(x,y)}\\right| = \\begin{vmatrix} 
+  \\frac{\\partial u}{\\partial x} & \\frac{\\partial u}{\\partial y} \\\\ 
+  \\frac{\\partial v}{\\partial x} & \\frac{\\partial v}{\\partial y} 
+  \\end{vmatrix}\\]
+- \\[\\iint_D f(x,y) \\,dx\\,dy = \\iint_{D'} f(u,v) |J| \\,du\\,dv\\]
 
 ### 2.2 Coordonnées polaires
-- x = r cos(θ), y = r sin(θ)
-- |J| = r
-- ∫∫D f(x,y) dxdy = ∫∫D f(r cos(θ), r sin(θ)) r drdθ
+- \\(x = r\\cos(\\theta)\\), \\(y = r\\sin(\\theta)\\)
+- \\(|J| = r\\)
+- \\[\\iint_D f(x,y) \\,dx\\,dy = \\iint_D f(r\\cos(\\theta), r\\sin(\\theta)) \\,r\\,dr\\,d\\theta\\]
 
 ## 3. Applications Géométriques
 
 ### 3.1 Calcul de volumes
-- Volume = ∫∫D f(x,y) dxdy
+- Volume : 
+  \\[\\iint_D f(x,y) \\,dx\\,dy\\]
 - Exemple : sphère de rayon R
-  * V = ∫∫D √(R² - x² - y²) dxdy
-  * En polaire : V = ∫0^2π ∫0^R r√(R² - r²) drdθ
+  * \\[V = \\iint_D \\sqrt{R^2 - x^2 - y^2} \\,dx\\,dy\\]
+  * En polaire : 
+    \\[V = \\int_{0}^{2\\pi} \\int_{0}^{R} r\\sqrt{R^{2} - r^{2}} \\,dr\\,d\\theta\\]
 
 ### 3.2 Calcul d'aires
-- Aire = ∫∫D 1 dxdy
-- En polaire : A = ∫∫D r drdθ
+- Aire : 
+  \\[\\iint_D 1 \\,dx\\,dy\\]
+- En polaire : 
+  \\[\\iint_D r \\,dr\\,d\\theta\\]
 
 ## 4. Méthodes de Résolution
 
 ### 4.1 Étapes clés
-1. Identifier le domaine D
+1. Identifier le domaine \\(D\\)
 2. Choisir le système de coordonnées adapté
 3. Déterminer les bornes d'intégration
 4. Calculer l'intégrale itérée
@@ -52,19 +64,22 @@
 ## 5. Cas Particuliers
 
 ### 5.1 Domaines symétriques
-- Si D symétrique / Ox : ∫∫D f(x,-y) = ∫∫D f(x,y)
-- Si D symétrique / Oy : ∫∫D f(-x,y) = ∫∫D f(x,y)
-- Si f paire en x : diviser par 2 et intégrer sur x>0
+- Si D symétrique / Ox : 
+  \\[\\iint_D f(x,-y) = \\iint_D f(x,y)\\]
+- Si D symétrique / Oy : 
+  \\[\\iint_D f(-x,y) = \\iint_D f(x,y)\\]
+- Si f paire en x : diviser par 2 et intégrer sur \\(x>0\\)
 
 ### 5.2 Intégrales triples
-- Extension naturelle : ∫∫∫E f(x,y,z) dxdydz
-- Coordonnées sphériques : |J| = r² sin(φ)
-- x = r sin(φ) cos(θ)
-- y = r sin(φ) sin(θ)
-- z = r cos(φ)
+- Extension naturelle : 
+  \\[\\iiint_E f(x,y,z) \\,dx\\,dy\\,dz\\]
+- Coordonnées sphériques : \\(|J| = r^2\\sin(\\phi)\\)
+- \\[x = r\\sin(\\phi)\\cos(\\theta)\\]
+- \\[y = r\\sin(\\phi)\\sin(\\theta)\\]
+- \\[z = r\\cos(\\phi)\\]
 
 ## Formules Importantes
-1. Aire du cercle : πR²
-2. Volume de la sphère : 4πR³/3
-3. Moment d'inertie : ∫∫D r² dm
-4. Centre de masse : (∫∫D xdm)/M, (∫∫D ydm)/M 
+1. Aire du cercle : \\[\\pi R^2\\]
+2. Volume de la sphère : \\[\\frac{4}{3}\\pi R^3\\]
+3. Moment d'inertie : \\[\\iint_D r^2 \\,dm\\]
+4. Centre de masse : \\[\\left(\\frac{\\iint_D x\\,dm}{M}, \\frac{\\iint_D y\\,dm}{M}\\right)\\] 

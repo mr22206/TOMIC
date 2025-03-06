@@ -1,83 +1,99 @@
-# Exercices Types - Fonctions de Plusieurs Variables
+# Exercices Types
 
-## Exercice 1 : Dérivées Partielles
-Soit f(x,y) = x²y + xy² + sin(xy)
+## 1. Fonctions de Plusieurs Variables
 
-1. Calculer ∂f/∂x et ∂f/∂y
-2. Calculer ∂²f/∂x² et ∂²f/∂y²
-3. Calculer ∂²f/∂x∂y
+### Exercice 1.1 : Domaine de Définition
+Déterminer le domaine de définition des fonctions suivantes :
 
-Solution :
-1. ∂f/∂x = 2xy + y² + y·cos(xy)
-   ∂f/∂y = x² + 2xy + x·cos(xy)
-2. ∂²f/∂x² = 2y - y²·sin(xy)
-   ∂²f/∂y² = 2x - x²·sin(xy)
-3. ∂²f/∂x∂y = 2 + cos(xy) - xy·sin(xy)
+1. \\(f(x,y) = \\sqrt{1-x^2-y^2}\\)
+2. \\(g(x,y) = \\ln(x^2+y^2)\\)
+3. \\(h(x,y) = \\frac{1}{x-y}\\)
 
-## Exercice 2 : Extremums Locaux
-Soit f(x,y) = x² + y² - 2xy + 2x - 4y
+### Exercice 1.2 : Limites et Continuité
+Étudier les limites et la continuité en (0,0) :
 
-1. Trouver les points critiques
-2. Déterminer la nature de ces points
-3. En déduire les extremums locaux
+1. \\(f(x,y) = \\frac{xy}{x^2+y^2}\\)
+2. \\(g(x,y) = \\frac{x^2y}{x^2+y^2}\\)
+3. \\(h(x,y) = \\frac{x^2-y^2}{x^2+y^2}\\)
 
-Solution :
-1. ∂f/∂x = 2x - 2y + 2 = 0
-   ∂f/∂y = 2y - 2x - 4 = 0
-   → Point critique : (3,1)
+## 2. Dérivées Partielles
 
-2. Matrice hessienne :
-   H = [2 -2; -2 2]
-   det(H) = 4 - 4 = 0
-   ∂²f/∂x² = 2 > 0
+### Exercice 2.1 : Calcul Direct
+Calculer les dérivées partielles :
 
-3. C'est un minimum local en (3,1)
-   f(3,1) = 9 + 1 - 6 + 6 - 4 = 6
+1. \\(f(x,y) = x^2y + \\sin(xy)\\)
+   \\[\\frac{\\partial f}{\\partial x} = 2xy + y\\cos(xy)\\]
+   \\[\\frac{\\partial f}{\\partial y} = x^2 + x\\cos(xy)\\]
 
-## Exercice 3 : Développement Limité
-Calculer le DL à l'ordre 2 de f(x,y) = exp(x+y) au point (0,0)
+2. \\(g(x,y,z) = xe^{yz} + \\ln(x^2+y^2)\\)
+   \\[\\frac{\\partial g}{\\partial x} = e^{yz} + \\frac{2x}{x^2+y^2}\\]
+   \\[\\frac{\\partial g}{\\partial y} = xze^{yz} + \\frac{2y}{x^2+y^2}\\]
+   \\[\\frac{\\partial g}{\\partial z} = xye^{yz}\\]
 
-Solution :
-1. f(0,0) = 1
-2. ∂f/∂x(0,0) = 1
-   ∂f/∂y(0,0) = 1
-3. ∂²f/∂x²(0,0) = 1
-   ∂²f/∂y²(0,0) = 1
-   ∂²f/∂x∂y(0,0) = 1
+### Exercice 2.2 : Dérivées d'Ordre Supérieur
+Calculer les dérivées secondes :
+\\[\\frac{\\partial^2 f}{\\partial x^2}, \\frac{\\partial^2 f}{\\partial y^2}, \\frac{\\partial^2 f}{\\partial x\\partial y}\\]
 
-DL₂(x,y) = 1 + x + y + (x²/2) + xy + (y²/2)
+## 3. Différentiabilité
 
-## Exercice 4 : Application Économique
-Une fonction de production est donnée par :
-f(K,L) = 50K^(0.5)L^(0.3)
+### Exercice 3.1 : Matrice Jacobienne
+Calculer la matrice jacobienne :
+\\[J = \\begin{pmatrix}
+\\frac{\\partial f_1}{\\partial x} & \\frac{\\partial f_1}{\\partial y} \\\\
+\\frac{\\partial f_2}{\\partial x} & \\frac{\\partial f_2}{\\partial y}
+\\end{pmatrix}\\]
 
-1. Calculer les productivités marginales
-2. Déterminer les rendements d'échelle
-3. Trouver le point optimal pour un budget B = 1000
+### Exercice 3.2 : Approximation Linéaire
+Utiliser la différentielle :
+\\[df = \\frac{\\partial f}{\\partial x}dx + \\frac{\\partial f}{\\partial y}dy\\]
 
-Solution :
-1. PMK = 25K^(-0.5)L^(0.3)
-   PML = 15K^(0.5)L^(-0.7)
+## 4. Extremums
 
-2. 0.5 + 0.3 < 1 : rendements décroissants
+### Exercice 4.1 : Points Critiques
+1. Trouver les points critiques : 
+   \\[\\frac{\\partial f}{\\partial x} = 0, \\frac{\\partial f}{\\partial y} = 0\\]
+2. Calculer la matrice hessienne :
+   \\[H = \\begin{pmatrix}
+   \\frac{\\partial^2 f}{\\partial x^2} & \\frac{\\partial^2 f}{\\partial x\\partial y} \\\\
+   \\frac{\\partial^2 f}{\\partial y\\partial x} & \\frac{\\partial^2 f}{\\partial y^2}
+   \\end{pmatrix}\\]
+3. Déterminer la nature des points critiques
 
-3. Conditions optimales :
-   PMK/r = PML/w
-   rK + wL = 1000
-   (résolution numérique nécessaire)
+### Exercice 4.2 : Extremums Sous Contraintes
+Utiliser la méthode des multiplicateurs de Lagrange :
+\\[\\mathcal{L}(x,y,\\lambda) = f(x,y) - \\lambda g(x,y)\\]
 
-## Méthodes à Retenir
+## 5. Applications
 
-1. Pour les dérivées partielles :
-   - Traiter les autres variables comme des constantes
-   - Appliquer les règles usuelles de dérivation
+### Exercice 5.1 : Optimisation
+Résoudre des problèmes d'optimisation :
+1. Distance minimale
+2. Volume maximal
+3. Coût minimal
 
-2. Pour les extremums :
-   - Système d'équations avec dérivées partielles = 0
-   - Étude de la matrice hessienne
-   - Conclusion selon le signe du déterminant
+### Exercice 5.2 : Physique
+Applications en physique :
+1. Champs scalaires : \\(\\phi(x,y,z)\\)
+2. Champs vectoriels : \\(\\vec{F}(x,y,z)\\)
+3. Potentiel gravitationnel : 
+   \\[V(x,y,z) = -\\frac{GM}{\\sqrt{x^2+y^2+z^2}}\\]
 
-3. Pour les DL :
-   - Calculer f et toutes les dérivées au point
-   - Appliquer la formule de Taylor
-   - Vérifier la cohérence des termes 
+## Méthodes de Résolution
+
+### 1. Étapes Générales
+1. Identifier le type de problème
+2. Écrire les équations
+3. Résoudre méthodiquement
+4. Vérifier la cohérence
+
+### 2. Outils Mathématiques
+1. Dérivées partielles
+2. Matrices jacobiennes
+3. Multiplicateurs de Lagrange
+4. Développements limités
+
+## Exercices de calcul
+- Intégrale double : 
+  \\[\\iint_{D} xy \\,dx\\,dy = \\int_{0}^{2} \\int_{x^{2}}^{2x} xy \\,dy\\,dx\\]
+- Volume : 
+  \\[V = \\int_{0}^{2\\pi} \\int_{0}^{1} r^{2}\\sin(\\phi) \\,dr\\,d\\phi\\]

@@ -1,102 +1,85 @@
-# Exercices - Intégrations Multiples
+# Exercices d'Intégration Multiple
 
-## 1. Intégrales Doubles sur Rectangle
+## 1. Intégrales Doubles
 
-### Exercice 1.1
-Calculer I = ∫∫[0,1]×[0,2] (x + y²) dxdy
+### Exercice 1.1 : Calcul Direct
+Calculer :
+\\[\\iint_D (x^2 + y^2)\\,dx\\,dy\\]
+où \\(D = \\{(x,y) : x^2 + y^2 \\leq 1\\}\\)
 
-**Méthode** :
-1. Choisir l'ordre : commencer par dy
-2. I = ∫0^1 (∫0^2 (x + y²) dy) dx
-3. I = ∫0^1 (2x + 8/3) dx = 2 + 8/3
+### Exercice 1.2 : Changement d'Ordre
+Calculer en changeant l'ordre d'intégration :
+\\[\\int_0^1\\int_y^1 f(x,y)\\,dx\\,dy = \\int_0^1\\int_0^x f(x,y)\\,dy\\,dx\\]
 
-**Avec calculatrice** :
-```python
-def f(x,y):
-    return x + y**2
+## 2. Coordonnées Polaires
 
-def integrale_rectangle(n=100):
-    dx = 1/n
-    dy = 2/n
-    s = 0
-    for i in range(n):
-        for j in range(n):
-            x = i*dx
-            y = j*dy
-            s += f(x,y)*dx*dy
-    return s
-```
+### Exercice 2.1 : Transformation
+Utiliser la transformation :
+\\[\\begin{cases}
+x = r\\cos(\\theta) \\\\
+y = r\\sin(\\theta)
+\\end{cases}\\]
+avec jacobien : \\[J = r\\]
 
-## 2. Changement en Coordonnées Polaires
+### Exercice 2.2 : Applications
+Calculer :
+1. Aire du disque : 
+   \\[A = \\int_0^{2\\pi}\\int_0^R r\\,dr\\,d\\theta\\]
+2. Moment d'inertie : 
+   \\[I = \\iint_D (x^2 + y^2)\\rho\\,dx\\,dy\\]
 
-### Exercice 2.1
-Calculer l'aire du disque D : x² + y² ≤ 4
+## 3. Intégrales Triples
 
-**Solution** :
-1. En cartésien : A = ∫∫D 1 dxdy
-2. En polaire : A = ∫0^2π ∫0^2 r drdθ
-3. A = 2π × 2²/2 = 4π
+### Exercice 3.1 : Volume
+Calculer le volume :
+\\[V = \\iiint_E\\,dx\\,dy\\,dz\\]
+où \\(E\\) est une sphère de rayon \\(R\\)
 
-**Programme calculatrice** :
-```basic
-:Input "R=",R
-:2*π*R²/2→A
-:Disp "AIRE=",A
-```
+### Exercice 3.2 : Coordonnées Sphériques
+Utiliser la transformation :
+\\[\\begin{cases}
+x = r\\sin(\\phi)\\cos(\\theta) \\\\
+y = r\\sin(\\phi)\\sin(\\theta) \\\\
+z = r\\cos(\\phi)
+\\end{cases}\\]
+avec jacobien : \\[J = r^2\\sin(\\phi)\\]
 
-### Exercice 2.2
-Calculer I = ∫∫D exp(-x²-y²) dxdy sur D : x² + y² ≤ 1
+## 4. Applications Physiques
 
-**Méthode** :
-1. Passage en polaire : x = r cos(θ), y = r sin(θ)
-2. I = ∫0^2π ∫0^1 exp(-r²) r drdθ
-3. I = 2π × [-exp(-r²)/2]0^1 = π(1-1/e)
+### Exercice 4.1 : Centre de Masse
+Calculer :
+\\[\\vec{G} = \\frac{1}{M}\\iiint_E \\rho(x,y,z)\\vec{r}\\,dx\\,dy\\,dz\\]
+où \\[M = \\iiint_E \\rho(x,y,z)\\,dx\\,dy\\,dz\\]
 
-## 3. Applications Pratiques
+### Exercice 4.2 : Moments d'Inertie
+Calculer la matrice d'inertie :
+\\[I = \\begin{pmatrix}
+\\iiint_E \\rho(y^2+z^2)\\,dx\\,dy\\,dz & -\\iiint_E \\rho xy\\,dx\\,dy\\,dz & -\\iiint_E \\rho xz\\,dx\\,dy\\,dz \\\\
+-\\iiint_E \\rho xy\\,dx\\,dy\\,dz & \\iiint_E \\rho(x^2+z^2)\\,dx\\,dy\\,dz & -\\iiint_E \\rho yz\\,dx\\,dy\\,dz \\\\
+-\\iiint_E \\rho xz\\,dx\\,dy\\,dz & -\\iiint_E \\rho yz\\,dx\\,dy\\,dz & \\iiint_E \\rho(x^2+y^2)\\,dx\\,dy\\,dz
+\\end{pmatrix}\\]
 
-### Exercice 3.1
-Une plaque métallique D est délimitée par y = x² et y = 2-x² pour x ∈ [0,1].
-Calculer sa masse si la densité est ρ(x,y) = x + y.
+## 5. Méthodes Numériques
 
-**Étapes** :
-1. Dessiner le domaine
-2. M = ∫∫D ρ(x,y) dxdy
-3. Bornes : ∫0^1 ∫x² ^(2-x²) (x+y) dy dx
+### Exercice 5.1 : Méthode des Rectangles
+Approximer :
+\\[\\iint_D f(x,y)\\,dx\\,dy \\approx \\sum_{i,j} f(x_i,y_j)\\Delta x\\Delta y\\]
 
-**Vérification calculatrice** :
-```python
-def rho(x,y):
-    return x + y
+### Exercice 5.2 : Monte Carlo
+Estimer l'intégrale par :
+\\[I \\approx V\\frac{N_{in}}{N_{total}}\\]
+où \\(V\\) est le volume englobant
 
-def masse(n=50):
-    dx = 1/n
-    s = 0
-    for i in range(n):
-        x = i*dx
-        y1 = x**2
-        y2 = 2-x**2
-        dy = (y2-y1)/n
-        for j in range(n):
-            y = y1 + j*dy
-            s += rho(x,y)*dx*dy
-    return s
-```
+## Méthodes de Résolution
 
-## 4. Intégrales Triples
-
-### Exercice 4.1
-Calculer le volume de la boule unité : x² + y² + z² ≤ 1
-
-**Méthode 1 (cartésienne)** :
-1. V = ∫∫∫E 1 dxdydz
-2. V = ∫-1^1 ∫-√(1-x²)^√(1-x²) ∫-√(1-x²-y²)^√(1-x²-y²) dz dy dx
-
-**Méthode 2 (sphérique)** :
-1. V = ∫0^2π ∫0^π ∫0^1 r² sin(φ) dr dφ dθ
-2. V = 4π/3
-
-## Conseils pour l'Examen
-1. Toujours dessiner le domaine
+### 1. Étapes Générales
+1. Identifier le domaine
 2. Choisir les coordonnées adaptées
-3. Vérifier l'homogénéité
-4. Utiliser les symétries 
+3. Poser les bornes d'intégration
+4. Calculer l'intégrale
+
+### 2. Points Clés
+1. Ordre d'intégration
+2. Changements de variables
+3. Symétries du problème
+4. Méthodes numériques 

@@ -34,19 +34,12 @@ Illustration du tenseur de déformation
 
 Voici les équations de conservation des solides déformables :
 
-Pour traduire la conservation de la masse, nous avons l’équation de continuité. : 
- avec 
- la vitesse du solide ;
+Pour traduire la conservation de la masse, nous avons l'équation de continuité : \[ \nabla \cdot \vec{v} = 0 \] avec \( \vec{v} \) la vitesse du solide ;
 
-Dans l’étude cinématique, nous avons établi les relations entre le vecteur déplacement 
- et le tenseur des déformations 
- : 
+Dans l'étude cinématique, nous avons établi les relations entre le vecteur déplacement \( \vec{u} \) et le tenseur des déformations \( \varepsilon \) : 
+\[ \varepsilon = \frac{1}{2}(\nabla \vec{u} + \nabla \vec{u}^T) \]
 
-Enfin dans l’étude dynamique, le principe fondamental de la mécanique s'applique : 
- avec 
- le tenseur des contraintes, 
- les forces externes et 
- l'accélération du solide
+Enfin dans l'étude dynamique, le principe fondamental de la mécanique s'applique : \[ \rho\vec{a} = \nabla \cdot \sigma + \vec{f} \] avec \( \sigma \) le tenseur des contraintes, \( \vec{f} \) les forces externes et \( \vec{a} \) l'accélération du solide
 
 Mécanique des fluides :
 
@@ -60,51 +53,32 @@ Elles modélisent les mouvements de l'air, de l'atmosphère, les courants océan
 
 Voici les équations de Navier-Stokes :
 
-Equation de continuité (ou équation de bilan de la masse) : 
- où 
- est la masse volumique, 
- la vitesse d'une particule fluide ;
+Equation de continuité (ou équation de bilan de la masse) : \[ \frac{\partial \rho}{\partial t} + \nabla \cdot (\rho\vec{v}) = 0 \] où \( \rho \) est la masse volumique, \( \vec{v} \) la vitesse d'une particule fluide ;
 
-Equation de bilan de la quantité de mouvement 
- où 
- est la pression thermodynamique, 
- est le tenseur des contraintes visqueuses et 
- la pesanteur  ;
+Equation de bilan de la quantité de mouvement \[ \rho\frac{D\vec{v}}{Dt} = -\nabla p + \nabla \cdot \tau + \rho\vec{g} \] où \( p \) est la pression thermodynamique, \( \tau \) est le tenseur des contraintes visqueuses et \( \vec{g} \) la pesanteur ;
 
-Équation de bilan de l'énergie 
- où 
- est l'énergie totale et 
- est le flux de chaleur.
+Équation de bilan de l'énergie \[ \rho\frac{De}{Dt} = -p\nabla \cdot \vec{v} + \nabla \cdot \vec{q} \] où \( e \) est l'énergie totale et \( \vec{q} \) est le flux de chaleur.
 
 🔎 Équations de Navier-Stokes : définition et explications (techno-science.net)
 
 
 
-image tirée de The Navier-Stokes Equations. Math for continuum mechanics, part 1. | by Panda the Red | Cantor’s Paradise (cantorsparadise.com)
+image tirée de The Navier-Stokes Equations. Math for continuum mechanics, part 1. | by Panda the Red | Cantor's Paradise (cantorsparadise.com)
 
 
 On peut aussi évoquer les fameuses équations de Maxwell formant les bases de la compréhension des lois de l'électromagnétisme.
 
 Ces équations traduisent sous forme locale différents théorèmes (Gauss, Ampère, Faraday).
 
-Loi de conservation des flux de Gauss  :
- où 
- est le champ magnétique
+Loi de conservation des flux de Gauss : \[ \nabla \cdot \vec{B} = 0 \] où \( \vec{B} \) est le champ magnétique
 
-Equation sur le champ électrique de Maxwell 
- où 
- est le champ électrique, 
-la densité de charge électrique et 
- la permittivité diélectrique du vide.
+Equation sur le champ électrique de Maxwell \[ \nabla \cdot \vec{E} = \frac{\rho}{\varepsilon_0} \] où \( \vec{E} \) est le champ électrique, \( \rho \) la densité de charge électrique et \( \varepsilon_0 \) la permittivité diélectrique du vide.
 
-Equation de Maxwell-Faraday pour l'induction électromagnétique 
+Equation de Maxwell-Faraday pour l'induction électromagnétique \[ \nabla \times \vec{E} = -\frac{\partial \vec{B}}{\partial t} \]
 
-Equation de Maxwell-Ampère avec la densité de courant : 
- où 
- est la perméabilité magnétique du vide et 
- la densité de courant.
+Equation de Maxwell-Ampère avec la densité de courant : \[ \nabla \times \vec{B} = \mu_0\vec{j} + \mu_0\varepsilon_0\frac{\partial \vec{E}}{\partial t} \] où \( \mu_0 \) est la perméabilité magnétique du vide et \( \vec{j} \) la densité de courant.
 
-Equation de la conservation de la charge : 
+Equation de la conservation de la charge : \[ \nabla \cdot \vec{j} + \frac{\partial \rho}{\partial t} = 0 \]
 
 [Les équations Clefs de la physique] Les équations de Maxwell, #6 - YouTube
 
@@ -127,7 +101,7 @@ Solving the Navier-Stokes Equations in Python simply using NumPy (pythonawesome.
 
 Essayer les codes en faisant en premier : Channel flow in 2D : 12 Steps to Navier-Stokes in Python: Step 12 Channel Flow - YouTube
 
-GitHub - rjwalia/Navier-Stokes-Numerical-Solution-Using-FDM-FVM-Python-Scripting: Python script for Linear, Non-Linear Convection, Burger’s & Poisson Equation in 1D & 2D, 1D Diffusion Equation using Standard Wall Function, 2D Heat Conduction Convection equation with Dirichlet & Neumann BC, full Navier-Stokes Equation coupled with Poisson equation for Cavity and Channel flow in 2D using Finite Difference Method & Finite Volume Method.
+GitHub - rjwalia/Navier-Stokes-Numerical-Solution-Using-FDM-FVM-Python-Scripting: Python script for Linear, Non-Linear Convection, Burger's & Poisson Equation in 1D & 2D, 1D Diffusion Equation using Standard Wall Function, 2D Heat Conduction Convection equation with Dirichlet & Neumann BC, full Navier-Stokes Equation coupled with Poisson equation for Cavity and Channel flow in 2D using Finite Difference Method & Finite Volume Method.
 
 Pour aller plus loin Mécanique (hors TOMIC) :
 a. Equations de Maxwell et application [Ondes électromagnétiques] (unisciel.fr)

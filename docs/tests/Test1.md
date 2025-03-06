@@ -2,15 +2,33 @@
 ## Calculatrice autorisée
 
 ### Exercice 1 : Fonctions de Plusieurs Variables (6 points)
-Soit f(x,y) = x³ + xy² - 3x²y
 
-1. (2pts) Calculer les dérivées partielles premières et secondes.
-2. (2pts) Déterminer les points critiques.
-3. (2pts) Étudier la nature de ces points (minimum, maximum, point selle).
+### Question 1.1 (2 points)
+Soit \\(f(x,y) = x^{3} + xy^{2} - 3x^{2}y\\)
+
+1. (2pts) Calculer les dérivées partielles :
+   \\[ \\frac{\\partial f}{\\partial x} = 3x^{2} + y^{2} - 6xy \\]
+   \\[ \\frac{\\partial f}{\\partial y} = 2xy - 3x^{2} \\]
+
+2. Points critiques : \\[ \\begin{cases}
+\\frac{\\partial f}{\\partial x} = 0 \\\\
+\\frac{\\partial f}{\\partial y} = 0
+\\end{cases} \\]
+
+### Question 1.2 (2 points)
+Étudier la nature des points critiques avec la matrice hessienne :
+\\[ H = \\begin{pmatrix}
+\\frac{\\partial^2 f}{\\partial x^2} & \\frac{\\partial^2 f}{\\partial x\\partial y} \\\\
+\\frac{\\partial^2 f}{\\partial y\\partial x} & \\frac{\\partial^2 f}{\\partial y^2}
+\\end{pmatrix} \\]
+
+### Question 1.3 (2 points)
+Calculer le développement limité à l'ordre 2 en \\((0,0)\\) :
+\\[ f(x,y) = f(0,0) + \\frac{\\partial f}{\\partial x}(0,0)x + \\frac{\\partial f}{\\partial y}(0,0)y + \\frac{1}{2}\\left(\\frac{\\partial^2 f}{\\partial x^2}(0,0)x^2 + 2\\frac{\\partial^2 f}{\\partial x\\partial y}(0,0)xy + \\frac{\\partial^2 f}{\\partial y^2}(0,0)y^2\\right) + o(x^2+y^2) \\]
 
 ### Exercice 2 : Intégrations Multiples (4 points)
 Calculer l'intégrale double :
-I = ∫∫D xy dxdy où D est le domaine limité par y = x² et y = 2x
+\\[ I = \\iint_D xy\\,dxdy \\] où D est le domaine limité par \\(y = x^2\\) et \\(y = 2x\\)
 
 1. (1pt) Représenter le domaine D
 2. (1pt) Déterminer les bornes d'intégration
@@ -18,16 +36,16 @@ I = ∫∫D xy dxdy où D est le domaine limité par y = x² et y = 2x
 
 ### Exercice 3 : Oscillateurs (5 points)
 Un oscillateur harmonique amorti est décrit par l'équation :
-mẍ + hẋ + kx = 0 avec m = 1kg, h = 2N.s/m, k = 10N/m
+\\[ m\\ddot{x} + h\\dot{x} + kx = 0 \\] avec \\(m = 1\\text{ kg}\\), \\(h = 2\\text{ N.s/m}\\), \\(k = 10\\text{ N/m}\\)
 
 1. (2pts) Déterminer le régime d'oscillation
 2. (2pts) Donner la solution générale
 3. (1pt) Calculer la pseudo-période si elle existe
 
 ### Exercice 4 : Opérateurs Vectoriels (5 points)
-Soit le champ vectoriel F = (y²)i + (2xy)j + (xz)k
+Soit le champ vectoriel \\(\\vec{F} = (y^2)\\vec{i} + (2xy)\\vec{j} + (xz)\\vec{k}\\)
 
-1. (2pts) Calculer div F et rot F
+1. (2pts) Calculer \\(\\text{div}\\,\\vec{F}\\) et \\(\\text{rot}\\,\\vec{F}\\)
 2. (1pt) Le champ est-il conservatif ?
 3. (2pts) Si oui, déterminer son potentiel
 
@@ -45,43 +63,43 @@ Soit le champ vectoriel F = (y²)i + (2xy)j + (xz)k
 ## Correction Détaillée
 
 ### Exercice 1
-1. ∂f/∂x = 3x² + y² - 6xy
-   ∂f/∂y = 2xy - 3x²
-   ∂²f/∂x² = 6x - 6y
-   ∂²f/∂y² = 2x
-   ∂²f/∂x∂y = 2y - 6x
+1. \\[ \\frac{\\partial f}{\\partial x} = 3x^2 + y^2 - 6xy \\]
+   \\[ \\frac{\\partial f}{\\partial y} = 2xy - 3x^2 \\]
+   \\[ \\frac{\\partial^2 f}{\\partial x^2} = 6x - 6y \\]
+   \\[ \\frac{\\partial^2 f}{\\partial y^2} = 2x \\]
+   \\[ \\frac{\\partial^2 f}{\\partial x\\partial y} = 2y - 6x \\]
 
 2. Points critiques : résoudre
-   3x² + y² - 6xy = 0
-   2xy - 3x² = 0
-   → (0,0) et (2,3)
+   \\[ 3x^2 + y^2 - 6xy = 0 \\]
+   \\[ 2xy - 3x^2 = 0 \\]
+   → \\((0,0)\\) et \\((2,3)\\)
 
-3. En (0,0) : H = [0 0; 0 0] → point dégénéré
-   En (2,3) : utiliser critère du hessien
+3. En \\((0,0)\\) : \\[ H = \\begin{pmatrix} 0 & 0 \\\\ 0 & 0 \\end{pmatrix} \\] → point dégénéré
+   En \\((2,3)\\) : utiliser critère du hessien
 
 ### Exercice 2
 1. Domaine : intersection de deux paraboles
 
-2. Bornes : 0 ≤ x ≤ 2
-           x² ≤ y ≤ 2x
+2. Bornes : \\[ 0 \\leq x \\leq 2 \\]
+           \\[ x^2 \\leq y \\leq 2x \\]
 
-3. I = ∫0^2 (∫x²^2x xy dy) dx
-     = ∫0^2 [xy²/2]x²^2x dx
-     = ∫0^2 (2x³ - x⁴/2) dx = 4
+3. \\[ I = \\int_0^2 \\left(\\int_{x^2}^{2x} xy\\,dy\\right)\\,dx \\]
+     \\[ = \\int_0^2 \\left[\\frac{xy^2}{2}\\right]_{x^2}^{2x}\\,dx \\]
+     \\[ = \\int_0^2 (2x^3 - \\frac{x^4}{2})\\,dx = 4 \\]
 
 ### Exercice 3
-1. λ = h/(2m) = 1
-   ω₀ = √(k/m) = √10
-   λ < ω₀ → régime pseudo-périodique
+1. \\[ \\lambda = \\frac{h}{2m} = 1 \\]
+   \\[ \\omega_0 = \\sqrt{\\frac{k}{m}} = \\sqrt{10} \\]
+   \\(\\lambda < \\omega_0\\) → régime pseudo-périodique
 
-2. x(t) = Ae^(-t)cos(√9 t + φ)
+2. \\[ x(t) = Ae^{-t}\\cos(\\sqrt{9}\\,t + \\phi) \\]
 
-3. T' = 2π/√9 ≈ 2.09s
+3. \\[ T' = \\frac{2\\pi}{\\sqrt{9}} \\approx 2.09\\text{ s} \\]
 
 ### Exercice 4
-1. div F = 2y + 2x + z
-   rot F = (0)i + (-x)j + (2y)k
+1. \\[ \\text{div}\\,\\vec{F} = 2y + 2x + z \\]
+   \\[ \\text{rot}\\,\\vec{F} = (0)\\vec{i} + (-x)\\vec{j} + (2y)\\vec{k} \\]
 
-2. Non car rot F ≠ 0
+2. Non car \\(\\text{rot}\\,\\vec{F} \\neq \\vec{0}\\)
 
 3. Non applicable car non conservatif 

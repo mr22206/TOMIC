@@ -27,7 +27,7 @@ La microéconomie est la branche de l'économie qui modélise le comportement de
 
 La modélisation de la microéconomie se basait sur les axiomes de Senior. Ils sont reformulés par les économistes. La modélisation microéconomique standard (ou néo-classique) repose sur les paradigmes de l'individualisme méthodologique et la théorie du choix rationnel.
 
-Elle suppose ainsi que les agents économiques sont censés disposer de capacités cognitives et d'informations suffisantes pour pouvoir, d'une part, construire des critères de choix entre différentes actions possibles et identifier les contraintes pesant sur ces choix, contraintes tant « internes » (leurs capacités technologiques s'il s'agit d'entreprises, par exemple), qu'« externes » (c’est-à-dire résultant de leur environnement économique), et, d'autre part, maximiser leur satisfaction sous contraintes. C'est le paradigme de l'Homo œconomicus.
+Elle suppose ainsi que les agents économiques sont censés disposer de capacités cognitives et d'informations suffisantes pour pouvoir, d'une part, construire des critères de choix entre différentes actions possibles et identifier les contraintes pesant sur ces choix, contraintes tant « internes » (leurs capacités technologiques s'il s'agit d'entreprises, par exemple), qu'« externes » (c'est-à-dire résultant de leur environnement économique), et, d'autre part, maximiser leur satisfaction sous contraintes. C'est le paradigme de l'Homo œconomicus.
 
 L'étude de l'économie a généré et génère des courants de pensées variés. On peut citer des lois forts connues comme la loi de Malthus (1766- 1834) qui implique une croissance exponentielles de la population. Le malthusianisme qui inclut une politique active de contrôle de la natalité pour maîtriser la croissance de la population.
 
@@ -45,32 +45,17 @@ Image extraite de Loi de l'offre et de la demande - Définition et exemples (wik
 
 Pour l'étude de la dynamique du système économique, la fonction utilisé pour des agents représentatifs est supposée de type Cobb (1875-1949) -Douglas (1892 - 1976).
 
-Prenons un exemple standard, la fonction de production décrit la relation entre la quantité produite d’un bien quelconque et les quantités des différents facteurs de production nécessaires à sa fabrication. Lorsqu’il y a deux facteurs de production (les facteurs de production sont la terre/capital et le travail dans l’opération de récolte), la fonction de production est une fonction numérique de 2 variables réelles :
+Prenons un exemple standard, la fonction de production décrit la relation entre la quantité produite d'un bien quelconque et les quantités des différents facteurs de production nécessaires à sa fabrication. Lorsqu'il y a deux facteurs de production (les facteurs de production sont la terre/capital et le travail dans l'opération de récolte), la fonction de production est une fonction numérique de 2 variables réelles :
 
- avec 
- le niveau de production, 
- celui du de la terre/capital, 
- celui du travail et 
- des constantes déterminées par l'expérience.
+\[ Y = AK^\alpha L^\beta \] avec \( Y \) le niveau de production, \( K \) celui du de la terre/capital, \( L \) celui du travail et \( A, \alpha, \beta \) des constantes déterminées par l'expérience.
 
+La dérivée partielle de \( Y \) par rapport à \( K \) mesure le taux de variation de la quantité produite lorsque la quantité de capital \( K \) utilisée est modifiée d'une unité, en supposant inchangée la quantité de travail \( L \) utilisée, c'est pourquoi elle est appelée productivité marginale du capital qui est noté :
 
+\[ \frac{\partial Y}{\partial K} = \alpha AK^{\alpha-1}L^\beta \] en prenant \( K = K_0 \)
 
-Exemple de fonction de Cobb-Douglas extrait de Wikipédia
+De la même manière on définit la productivité marginale du travail comme la variation de la quantité produite consécutive à la modification de la quantité de travail \( L \) utilisée d'une unité, en maintenant fixée à \( K_0 \) la quantité de capital, elle est donnée par la dérivée partielle de la fonction de production par rapport à \( L \) :
 
-La dérivée partielle de 
- par rapport à 
- mesure le taux de variation de la quantité produite lorsque la quantité de capital 
- utilisée est modifiée d’une unité, en supposant inchangée la quantité de travail 
- utilisée, c’est pourquoi elle est appelée productivité marginale du capital qui est noté :
-
- en prenant 
-
-De la même manière on définit la productivité marginale du travail comme la variation de la quantité produite consécutive à la modification de la quantité de travail 
- utilisée d’une unité, en maintenant fixée à 
- la quantité de capital, elle est donnée par la dérivée partielle de la fonction de production par rapport à 
- :
-
- en prenant 
+\[ \frac{\partial Y}{\partial L} = \beta AK^\alpha L^{\beta-1} \] en prenant \( L = L_0 \)
 
 En ayant recours aux dérivées secondes, on peut faire apparaître la loi des rendements décroissants.
 
@@ -93,7 +78,7 @@ Intégrales doubles - Exercice 1.6 (unisciel.fr)
 Dérivées partielles d'une fonction de plusieurs variables [Dérivées - Différentielles] (unisciel.fr)
 
 Sujet Python :
-Visualisation d’une fonction de 2 variables — Cours Python
+Visualisation d'une fonction de 2 variables — Cours Python
 
 Calculatrice 3D - GeoGebra
 
