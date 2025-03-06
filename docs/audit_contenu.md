@@ -91,4 +91,10 @@
 ## Légende
 - ✅ : Contenu existant et satisfaisant
 - ❌ : Contenu manquant
-- 🔄 : Contenu à améliorer 
+- 🔄 : Contenu à améliorer
+
+---
+*Document rédigé par Mohammad Rezki - CESI EI A2*  
+*Pour toute question : [Bureau/CESIA2/Tomic]*
+
+--- 

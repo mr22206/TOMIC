@@ -1,6 +1,14 @@
-site_name: Révisions ETS - Semestre 3
-site_description: Support de révision pour les examens ETS14, ETS15 et ETS16
-site_author: CESIA2
+site_name: Documentation Mathématiques A2
+site_author: Mohammad Rezki
+site_description: Documentation des cours de mathématiques CESI EI A2
+
+# Informations sur l'auteur
+extra:
+  author:
+    name: Mohammad Rezki
+    institution: CESI A2
+    workspace: /c%3A/Users/rezki/Desktop/Bureau/CESIA2/Tomic
+  last_updated: 2025
 
 # Configuration du thème
 theme:
@@ -21,13 +29,13 @@ theme:
       accent: indigo
       toggle:
         icon: material/brightness-7
-        name: Mode sombre
+        name: Basculer en mode sombre
     - scheme: slate
       primary: indigo
       accent: indigo
       toggle:
         icon: material/brightness-4
-        name: Mode clair
+        name: Basculer en mode clair
   font:
     text: Roboto
     code: Roboto Mono
@@ -76,14 +84,17 @@ nav:
 
 # Extensions Markdown
 markdown_extensions:
+  - toc:
+      permalink: true
   - pymdownx.arithmatex:
       generic: true
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - admonition
   - footnotes
   - attr_list
   - pymdownx.details
-  - pymdownx.superfences
   - tables
-  - admonition
 
 # Plugins
 plugins:

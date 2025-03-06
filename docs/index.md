@@ -1,40 +1,77 @@
-# Support de Révision ETS - Semestre 3
+# Documentation Mathématiques A2
+
+## 📚 Contenu du Cours
+
+### 📖 Guide et Synthèse
+- [Guide d'Utilisation des Calculatrices](guide/Guide_Calculatrices.md)
+- [Synthèse Finale](guide/Synthese_Finale.md)
+
+### 🎯 ETS15 - Analyse Multivariable
+#### Fiches
+- [Fonctions de Plusieurs Variables](ETS15/Fiches/1_FonctionsPlusieursVariables.md)
+- [Intégration Multiple](ETS15/Fiches/2_IntegrationMultiple.md)
+
+#### Exercices
+- [Exercices Types](ETS15/Exercices/1_ExercicesTypes.md)
+- [Exercices Calculatrice](ETS15/Exercices/2_ExercicesCalculatrice.md)
+- [Exercices Intégration](ETS15/Exercices/3_ExercicesIntegration.md)
+
+### 🌊 ETS14 - Physique Mathématique
+#### Fiches
+- [Oscillateurs Harmoniques](ETS14/Fiches/1_OscillateursHarmoniques.md)
+- [Applications Physiques](ETS14/Fiches/2_ApplicationsPhysiques.md)
+- [Ondes Mécaniques](ETS14/Fiches/3_OndesMecaniques.md)
+- [Thermodynamique](ETS14/Fiches/4_Thermodynamique.md)
+
+#### Exercices
+- [Exercices Oscillateurs](ETS14/Exercices/1_ExercicesOscillateurs.md)
+
+### 🔄 ETS16 - Opérateurs Vectoriels
+#### Fiches
+- [Opérateurs Vectoriels](ETS16/Fiches/1_OperateursVectoriels.md)
+
+#### Exercices
+- [Exercices Opérateurs](ETS16/Exercices/1_ExercicesOperateurs.md)
+
+### 📝 Tests et Révisions
+- [Test Blanc 1](tests/Test1.md)
+- [Contexte Complet](tests/CONTEXTE_COMPLET.md)
+
+### 📅 Planning et Suivi
+- [Planning de Révision](Planning_Revision.md)
+- [Audit du Contenu](audit_contenu.md)
+
+---
+
+## 🎯 Objectifs du Cours
+
+Cette documentation regroupe l'ensemble des supports de cours et exercices pour le module de mathématiques en A2. Elle couvre trois grands domaines :
+
+1. **Analyse Multivariable** (ETS15)
+   - Fonctions de plusieurs variables
+   - Intégration multiple
+   - Applications pratiques
+
+2. **Physique Mathématique** (ETS14)
+   - Oscillateurs harmoniques
+   - Ondes mécaniques
+   - Thermodynamique
+
+3. **Calcul Vectoriel** (ETS16)
+   - Opérateurs différentiels
+   - Applications géométriques
+   - Champs vectoriels
+
+## 💡 Comment Utiliser cette Documentation
+
+1. Commencez par consulter le [Planning de Révision](Planning_Revision.md)
+2. Étudiez les fiches théoriques de chaque module
+3. Pratiquez avec les exercices correspondants
+4. Utilisez la [Synthèse Finale](guide/Synthese_Finale.md) pour les révisions
+5. Testez vos connaissances avec le [Test Blanc](tests/Test1.md)
 
 ## 🎯 Objectif
 Ce site regroupe l'ensemble des supports de révision pour les examens du semestre 3, couvrant les modules ETS14, ETS15 et ETS16.
-
-## 📚 Contenu
-
-### ETS15 - Fonctions et Intégrations
-- Fonctions de plusieurs variables
-- Développements limités
-- Intégrations multiples
-
-### ETS14 - Oscillateurs
-- Oscillateurs harmoniques
-- Applications physiques
-- Différents régimes
-
-### ETS16 - Opérateurs Vectoriels
-- Champs vectoriels
-- Opérateurs différentiels
-- Applications physiques
-
-<!-- ## 🗺️ Navigation
-
-### Guide de Révision
-- [Planning détaillé](guide/planning.md)
-- [Guide Calculatrices](guide/Guide_Calculatrices.md)
-- [Synthèse Finale](guide/Synthese_Final.md)
-
-### Par Module
-- [ETS15 - Théorie](ets15/theorie/fonctions.md)
-- [ETS14 - Théorie](ets14/theorie/oscillateurs.md)
-- [ETS16 - Théorie](ets16/theorie/operateurs.md)
-
-### Exercices et Tests
-- [Test Blanc](tests/test1.md)
-- [Exercices Types](ets15/exercices/types.md) -->
 
 ## 📅 Planning de Révision
 
