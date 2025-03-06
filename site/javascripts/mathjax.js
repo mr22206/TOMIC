@@ -1,16 +1,19 @@
 window.MathJax = {
+  loader: {
+    load: ['[tex]/ams', '[tex]/color']
+  },
   tex: {
-    inlineMath: [["\\(", "\\)"]],
-    displayMath: [["\\[", "\\]"]],
+    packages: {'[+]': ['ams', 'color']},
+    inlineMath: [['\\(', '\\)']],
+    displayMath: [['\\[', '\\]']],
     processEscapes: true,
-    processEnvironments: true,
-    packages: {'[+]': ['ams', 'noerrors']}
+    processEnvironments: true
   },
   options: {
-    ignoreHtmlClass: ".*|",
-    processHtmlClass: "arithmatex"
+    skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    processHtmlClass: 'arithmatex'
   },
-  loader: {
-    load: ['[tex]/ams', '[tex]/noerrors']
+  startup: {
+    typeset: true
   }
 }; 

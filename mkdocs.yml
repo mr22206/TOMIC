@@ -69,6 +69,10 @@ nav:
   - Tests et Révisions:
     - Test Blanc 1: tests/Test1.md
     - Contexte: tests/CONTEXTE_COMPLET.md
+    
+  - Planning: Planning_Revision.md
+
+  - Audit: audit_contenu.md
 
 # Extensions Markdown
 markdown_extensions:
