@@ -1,0 +1,112 @@
+ETS 15 : Fonctions de plusieurs variables
+Présentation
+Corbeille d'exercices
+contenu outils
+
+Objectifs d'apprentissage
+Prérequis
+Sujet
+Objectifs d'apprentissage
+Pour les AAV, voir le fichier « Indispensable pour tous : Référentiel de mathématiques »
+Prérequis
+Liste des prérequis
+Analyse : Etude de fonctions du Lycée : L'essentiel | Lelivrescolaire.fr
+
+ETS 07 : Développements limités
+
+ETS 13 : Intégrations et Interpolation
+
+Sujet
+Énoncé
+ETS 15 : Fonctions de plusieurs variables
+
+
+La microéconomie est la branche de l'économie qui modélise le comportement des agents économiques (consommateurs, ménages, entreprises, etc.) et leurs interactions notamment sur les marchés. Elle analyse le fonctionnement de différents domaines comme tel ou tel secteur industriel, ou encore le marché du travail, la famille, l'environnement, voire la criminalité. La méthodologie de la microéconomie repose sur la modélisation économique mais aussi sur la méthode expérimentale et sur des méthodes statistiques pour valider et calibrer les modèles économiques.
+
+À l'inverse de la microéconomie, la macroéconomie modélise les relations existantes entre les grands agrégats économiques, le revenu national, l'investissement, la consommation, le taux de chômage, l'inflation, etc.
+
+La modélisation de la microéconomie se basait sur les axiomes de Senior. Ils sont reformulés par les économistes. La modélisation microéconomique standard (ou néo-classique) repose sur les paradigmes de l'individualisme méthodologique et la théorie du choix rationnel.
+
+Elle suppose ainsi que les agents économiques sont censés disposer de capacités cognitives et d'informations suffisantes pour pouvoir, d'une part, construire des critères de choix entre différentes actions possibles et identifier les contraintes pesant sur ces choix, contraintes tant « internes » (leurs capacités technologiques s'il s'agit d'entreprises, par exemple), qu'« externes » (c’est-à-dire résultant de leur environnement économique), et, d'autre part, maximiser leur satisfaction sous contraintes. C'est le paradigme de l'Homo œconomicus.
+
+L'étude de l'économie a généré et génère des courants de pensées variés. On peut citer des lois forts connues comme la loi de Malthus (1766- 1834) qui implique une croissance exponentielles de la population. Le malthusianisme qui inclut une politique active de contrôle de la natalité pour maîtriser la croissance de la population.
+
+
+
+Image extraite de Un cas concret : le modèle de Malthus | Lelivrescolaire.fr
+
+Ou encore Smith (1723- 1790), père des sciences économiques modernes, posant les bases du libéralisme économique. L'idée smithienne est plus positive vers un équilibre harmonieux et stable, il pose la loi des rendements croissants.
+
+On peut aussi penser à la loi de l'offre et de la demande ou celle loi des rendements décroissants.
+
+
+
+Image extraite de Loi de l'offre et de la demande - Définition et exemples (wikiberal.org)
+
+Pour l'étude de la dynamique du système économique, la fonction utilisé pour des agents représentatifs est supposée de type Cobb (1875-1949) -Douglas (1892 - 1976).
+
+Prenons un exemple standard, la fonction de production décrit la relation entre la quantité produite d’un bien quelconque et les quantités des différents facteurs de production nécessaires à sa fabrication. Lorsqu’il y a deux facteurs de production (les facteurs de production sont la terre/capital et le travail dans l’opération de récolte), la fonction de production est une fonction numérique de 2 variables réelles :
+
+ avec 
+ le niveau de production, 
+ celui du de la terre/capital, 
+ celui du travail et 
+ des constantes déterminées par l'expérience.
+
+
+
+Exemple de fonction de Cobb-Douglas extrait de Wikipédia
+
+La dérivée partielle de 
+ par rapport à 
+ mesure le taux de variation de la quantité produite lorsque la quantité de capital 
+ utilisée est modifiée d’une unité, en supposant inchangée la quantité de travail 
+ utilisée, c’est pourquoi elle est appelée productivité marginale du capital qui est noté :
+
+ en prenant 
+
+De la même manière on définit la productivité marginale du travail comme la variation de la quantité produite consécutive à la modification de la quantité de travail 
+ utilisée d’une unité, en maintenant fixée à 
+ la quantité de capital, elle est donnée par la dérivée partielle de la fonction de production par rapport à 
+ :
+
+ en prenant 
+
+En ayant recours aux dérivées secondes, on peut faire apparaître la loi des rendements décroissants.
+
+La notion de fonctions à plusieurs variables apparait très tôt en physique où l'on étudie souvent des quantités dépendant de plusieurs autres . Le développement du calcul infinitésimal et la recherche de solutions d'équations différentielles et d'équations aux dérivées partielles voient l'enrichissement de cette partie de l'analyse. Les fonctions à plusieurs variables sont alors manipulées autant que les fonctions à une seule variable.
+
+L'étude des fonctions à plusieurs variables peut se classifier selon le nombre de variables de départ et d'arrivée. Les objets étudiés sont alors des courbes, des surfaces, des champs scalaires ou vectoriels.
+
+
+
+Tableau synthétique extrait de Wikipédia sur les fonctions de plusieurs variables
+
+Ressources pour les étudiants
+Sujet Mathématique :
+Fonctions de variables | La Licence Type (unisciel.fr)
+
+chap8_2010.pdf (unisciel.fr)
+
+Intégrales doubles - Exercice 1.6 (unisciel.fr)
+
+Dérivées partielles d'une fonction de plusieurs variables [Dérivées - Différentielles] (unisciel.fr)
+
+Sujet Python :
+Visualisation d’une fonction de 2 variables — Cours Python
+
+Calculatrice 3D - GeoGebra
+
+PythonTutorials/Bonus Tutorial 2 - Cobb-Douglas Model Derivation.ipynb at master · selmayildirim/PythonTutorials · GitHub
+
+Double Integrals Calculator - Symbolab
+
+Pour aller plus loin Economie (hors TOMIC)
+Microéconomie : la fonction Cobb-Douglas | Théorie du producteur #2 - YouTube
+
+Microéconomie : Productivité moyenne et marginale | Théorie du producteur #4 - YouTube
+
+Dynamique économique Ed. 9 page 32-33 et plus si le sujet vous intéresse !
+
+Suivant
+Réalisé avec Scenari (nouvelle fenêtre)

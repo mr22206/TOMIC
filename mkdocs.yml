@@ -1,0 +1,128 @@
+site_name: Révisions ETS - Semestre 3
+site_description: Support de révision pour les examens ETS14, ETS15 et ETS16
+site_author: CESIA2
+
+# Configuration du thème
+theme:
+  name: material
+  language: fr
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
+    - content.code.copy
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Mode sombre
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Mode clair
+  font:
+    text: Roboto
+    code: Roboto Mono
+  icon:
+    logo: material/school
+
+# Structure de navigation
+nav:
+  - Accueil:
+    - Introduction: index.md
+    - Guide Calculatrices: guide/Guide_Calculatrices.md
+    - Synthèse Finale: guide/Synthese_Finale.md
+
+  - ETS15:
+    - Fiches:
+      - Fonctions Plusieurs Variables: ETS15/Fiches/1_FonctionsPlusieursVariables.md
+      - Intégration Multiple: ETS15/Fiches/2_IntegrationMultiple.md
+    - Exercices:
+      - Exercices Types: ETS15/Exercices/1_ExercicesTypes.md
+      - Exercices Calculatrice: ETS15/Exercices/2_ExercicesCalculatrice.md
+      - Exercices Intégration: ETS15/Exercices/3_ExercicesIntegration.md
+
+  - ETS14:
+    - Fiches:
+      - Oscillateurs Harmoniques: ETS14/Fiches/1_OscillateursHarmoniques.md
+      - Applications Physiques: ETS14/Fiches/2_ApplicationsPhysiques.md
+    - Exercices:
+      - Exercices Oscillateurs: ETS14/Exercices/1_ExercicesOscillateurs.md
+
+  - ETS16:
+    - Fiches:
+      - Opérateurs Vectoriels: ETS16/Fiches/1_OperateursVectoriels.md
+    - Exercices:
+      - Exercices Opérateurs: ETS16/Exercices/1_ExercicesOperateurs.md
+
+  - Tests et Révisions:
+    - Test Blanc 1: tests/Test1.md
+    - Contexte: tests/CONTEXTE_COMPLET.md
+
+# Extensions Markdown
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+      toc_depth: 3
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+# Plugins
+plugins:
+  - search
+  - tags
+  - git-revision-date-localized:
+      type: date
+      fallback_to_build_date: true
+  - minify:
+      minify_html: true
+
+# JavaScript supplémentaire pour MathJax
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+# CSS personnalisé
+extra_css:
+  - stylesheets/extra.css
+
+# Configuration supplémentaire
+extra:
+  social:
+    - icon: fontawesome/solid/school
+      link: https://example.com/
+      name: Site de l'école
+  generator: false 

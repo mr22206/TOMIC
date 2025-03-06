@@ -1,0 +1,76 @@
+ETS 14 : Oscillateurs harmoniques
+Présentation
+Corbeille d'exercices
+contenu outils
+
+Objectifs d'apprentissage
+Prérequis
+Sujet
+Objectifs d'apprentissage
+Pour les AAV, voir le fichier « Indispensable pour tous : Référentiel de mathématiques »
+Prérequis
+Liste des prérequis
+ETS 1 : Nombres complexes
+
+ETS 11 : Equations différentielles
+
+ETS 12 : Matrices, Probabilités, Suites
+
+Sujet
+Énoncé
+ETS 14 : Oscillateurs harmoniques
+
+
+Quel est le point commun du système masse-ressort, d'un dipôle RLC dans un circuit, un pendule ?
+
+
+La réponse : les oscillations.
+
+
+Des régimes différents apparaissent en fonction des caractéristiques matériels (régime périodique, critique et apériodique).
+
+
+
+La force de ces similitudes est qu'il est possible de réaliser des analogies électromécaniques. Les oscillations mécaniques avec amortissement fluide, et les oscillations électriques d'un circuit RLC conduisent à deux équations différentielles du second ordre formellement identiques.
+
+
+
+
+La carte heuristique suivante permet de disposer d'une vue d'ensemble :
+
+
+
+Les oscillateurs peuvent être  :
+
+mécaniques, tels que les oscillateurs de translation (piston dans un moteur, lame de scie sauteuse, membrane d'un haut-parleur) ou les oscillateurs de rotation (pendule simple, pendule de torsion, balançoire).
+
+chimiques, à l'échelle macroscopique (l'expérience de Belousov (1893-1970)-Zhabotinsky (1938-2008), où la solution change de couleur toutes les 20 secondes) ou à l'échelle moléculaire (la molécule d'ammoniac " vibre " avec une fréquence qui ne dépend que de la température).
+
+biologiques, comme le cœur ou, à plus grande échelle, un écosystème.
+
+acoustiques, comme la membrane d'un haut-parleur ou la vibration de l'air.
+
+électriques, comme la tension alternative d'EDF.
+
+Mais aussi : les marées, le sillage de Von Karman (1881-1963) (tourbillons réguliers derrière les piles d'un pont), le vase de Tantale (qui se vide et se rempli à intervalles de temps définis).
+
+
+
+https://youtu.be/QouhxL-qfo0
+
+Ressources pour les étudiants
+Sujet Mathématique :
+Cours et exercices  : Equations différentielles (unisciel.fr)
+
+Cours et exercices : Systèmes différentiels (unisciel.fr)
+
+Sujet Python :
+ScholarVox : Programmation en Python pour les mathématiques : Cours et exercices Ed. 2 Cours et exercices Ed 2 Pages 186 à 199
+
+Solveur : Solveur d'Equations Différentielles - Calcul en Ligne (dcode.fr)
+
+Pour aller plus loin Mécanique (hors TOMIC) :
+Navigation [Systèmes oscillants] (unisciel.fr)
+
+Suivant
+Réalisé avec Scenari (nouvelle fenêtre)

@@ -1,0 +1,140 @@
+ETS 16 : Opérateurs vectoriels
+Présentation
+Corbeille d'exercices
+contenu outils
+
+Objectifs d'apprentissage
+Prérequis
+Sujet
+Objectifs d'apprentissage
+Pour les AAV, voir le fichier « Indispensable pour tous : Référentiel de mathématiques »
+Prérequis
+Liste des prérequis
+ETS 11 Equations différentielles
+
+ETS 15 Etude de problèmes multifacteurs
+
+Sujet
+Énoncé
+ETS 16 : Opérateurs vectoriels
+La mécanique des milieux continus englobe de nombreuses disciplines utiles aux futurs ingénieurs.
+
+
+
+
+Mécanique des solides déformables  et le lien avec la résistance des matériaux RDM :
+
+Elasticité
+
+Déformation plastique
+
+
+
+Illustration du tenseur de déformation
+
+Voici les équations de conservation des solides déformables :
+
+Pour traduire la conservation de la masse, nous avons l’équation de continuité. : 
+ avec 
+ la vitesse du solide ;
+
+Dans l’étude cinématique, nous avons établi les relations entre le vecteur déplacement 
+ et le tenseur des déformations 
+ : 
+
+Enfin dans l’étude dynamique, le principe fondamental de la mécanique s'applique : 
+ avec 
+ le tenseur des contraintes, 
+ les forces externes et 
+ l'accélération du solide
+
+Mécanique des fluides :
+
+Fluides newtoniens
+
+Fluides non newtoniens
+
+En mécanique des fluides, les équations de Navier-Stokes (1785 - 1836 et 1819 - 1903) sont des équations aux dérivées partielles non-linéaires qui décrivent le mouvement des fluides dans l'approximation des milieux continus.
+
+Elles modélisent les mouvements de l'air, de l'atmosphère, les courants océaniques, l'écoulement de l'eau dans un tuyau, et de nombreux autres phénomènes d'écoulement de fluides.
+
+Voici les équations de Navier-Stokes :
+
+Equation de continuité (ou équation de bilan de la masse) : 
+ où 
+ est la masse volumique, 
+ la vitesse d'une particule fluide ;
+
+Equation de bilan de la quantité de mouvement 
+ où 
+ est la pression thermodynamique, 
+ est le tenseur des contraintes visqueuses et 
+ la pesanteur  ;
+
+Équation de bilan de l'énergie 
+ où 
+ est l'énergie totale et 
+ est le flux de chaleur.
+
+🔎 Équations de Navier-Stokes : définition et explications (techno-science.net)
+
+
+
+image tirée de The Navier-Stokes Equations. Math for continuum mechanics, part 1. | by Panda the Red | Cantor’s Paradise (cantorsparadise.com)
+
+
+On peut aussi évoquer les fameuses équations de Maxwell formant les bases de la compréhension des lois de l'électromagnétisme.
+
+Ces équations traduisent sous forme locale différents théorèmes (Gauss, Ampère, Faraday).
+
+Loi de conservation des flux de Gauss  :
+ où 
+ est le champ magnétique
+
+Equation sur le champ électrique de Maxwell 
+ où 
+ est le champ électrique, 
+la densité de charge électrique et 
+ la permittivité diélectrique du vide.
+
+Equation de Maxwell-Faraday pour l'induction électromagnétique 
+
+Equation de Maxwell-Ampère avec la densité de courant : 
+ où 
+ est la perméabilité magnétique du vide et 
+ la densité de courant.
+
+Equation de la conservation de la charge : 
+
+[Les équations Clefs de la physique] Les équations de Maxwell, #6 - YouTube
+
+
+
+On voit l'importance de maitrise la mécanique du point, l'hydrostatique, l'électrostatique, la magnétostatique avant de coupler tous ces domaines dans des équations prenant en compte des phénomènes instationnaires.
+
+Ressources pour les étudiants
+Sujet Mathématique :
+Uniscicel opérateur vectoriel : Champs de vecteurs - Potentiel [Représentation mathématique de notions physiques] (unisciel.fr)
+
+Analyse vectorielle - Analyse vectorielle (unisciel.fr)
+
+Si vous voulez devenir riche :
+
+Navier-Stokes : le problème du prix du millénaire est peut-être résolu (futura-sciences.com)
+
+Sujet Python :
+Solving the Navier-Stokes Equations in Python simply using NumPy (pythonawesome.com)
+
+Essayer les codes en faisant en premier : Channel flow in 2D : 12 Steps to Navier-Stokes in Python: Step 12 Channel Flow - YouTube
+
+GitHub - rjwalia/Navier-Stokes-Numerical-Solution-Using-FDM-FVM-Python-Scripting: Python script for Linear, Non-Linear Convection, Burger’s & Poisson Equation in 1D & 2D, 1D Diffusion Equation using Standard Wall Function, 2D Heat Conduction Convection equation with Dirichlet & Neumann BC, full Navier-Stokes Equation coupled with Poisson equation for Cavity and Channel flow in 2D using Finite Difference Method & Finite Volume Method.
+
+Pour aller plus loin Mécanique (hors TOMIC) :
+a. Equations de Maxwell et application [Ondes électromagnétiques] (unisciel.fr)
+
+ondes1 equations de maxwell 2a mp 2016 (unisciel.fr)
+
+Introduction à la mécanique des fluides - Equations de Navier-Stokes (unisciel.fr)
+
+Suivant
+Réalisé avec Scenari (nouvelle fenêtre)
