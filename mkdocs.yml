@@ -79,6 +79,10 @@ markdown_extensions:
       toc_depth: 3
   - pymdownx.arithmatex:
       generic: true
+      block_tag: 'div'
+      inline_tag: 'span'
+      tex_inline_wrap: ['\\(', '\\)']
+      tex_block_wrap: ['\\[', '\\]']
   - pymdownx.betterem
   - pymdownx.caret
   - pymdownx.details
@@ -88,11 +92,7 @@ markdown_extensions:
   - pymdownx.keys
   - pymdownx.mark
   - pymdownx.smartsymbols
-  - pymdownx.superfences:
-      custom_fences:
-        - name: mermaid
-          class: mermaid
-          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.superfences
   - pymdownx.tabbed:
       alternate_style: true
   - pymdownx.tasklist:
